@@ -1,14 +1,24 @@
+/*BODY CSS*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/*HTML CSS*/
+/*Lato is the Google Font, linked in the 'head' tag of 'index.html'*/
 html {
     background-color: #fff;
     color: #555;
-    font-family: 'Lato', 'Arial', sans-serif;
+    font-family: 'Lato', 'Arial', sans-serif; 
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+}
+
+/*This works in conjunction with the 'grid.css' file*/
+/*This will be the only value that will have an absolute value in pixels. You should define all other layout margins and paddings in percentages and not in pixels*/
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
 }
