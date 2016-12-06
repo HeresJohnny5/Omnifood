@@ -1,12 +1,15 @@
-/*BODY CSS*/
+/* -------------------------------------------- */
+/* BODY CSS */
+/* -------------------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*HTML CSS*/
-/*Lato is the Google Font, linked in the 'head' tag of 'index.html'*/
+/* html CSS */
+/* Lato is the Google Font, linked in the 'head' tag of 'index.html' */
 html {
     background-color: #fff;
     color: #555;
@@ -16,9 +19,132 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-/*This works in conjunction with the 'grid.css' file*/
-/*This will be the only value that will have an absolute value in pixels. You should define all other layout margins and paddings in percentages and not in pixels*/
+/* -------------------------------------------- */
+/* REUSABLE COMPONENTS */
+/* -------------------------------------------- */
+
+/* This works in conjunction with the 'grid.css' file */
+/* This will be the only value that will have an absolute value in pixels. You should define all other layout margins and paddings in percentages and not in pixels */
 .row {
 	max-width: 1140px;
 	margin: 0 auto;
+}
+
+/* -------------------------------------------- */
+/* HEADINGS */
+/* -------------------------------------------- */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;/* In responsive design you want everything to be relative. This will be 48px or 200% of html font-size, 20px */
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+
+/* -------------------------------------------- */
+/* BUTTONS */
+/* -------------------------------------------- */
+
+/* button CSS */
+/* :link is the anchor tag in it's normal state */
+/* :visited is the anchor tag after the link has been visited */
+.btn:link,
+.btn:visited {
+    display: inline-block; /* The inline-block element does not force a line break. You can add both padding and margin to a inline-block element */
+    padding: 10px 30px;
+    text-decoration: none;
+    border-radius: 200px;
+    color: #fff;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+
+}
+
+.btn-full:link,
+.btn-full:visited {
+    background-color: #e67e22;
+    border: 1px solid #e67e22;
+    margin-right: 15px;
+    
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e22;
+    color: #e67e22;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #cf6d17;  
+}
+
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #cf6d17;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #cf6d17;
+    color: #fff;
+}
+
+/* -------------------------------------------- */
+/* HEADER */
+/* -------------------------------------------- */
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /*The linear-gradient when on top of the image acts like two background images at the same time. You need to have two colors inside the parenthesis*/
+    height: 100vh; /*vh means it's 100% of the viewport*/
+    background-size: cover;
+    background-position: center;
+}
+
+/* This will not use the responsive flud grid b/c you want this box to be absolutely positioned. This is the only way you can both vertically and horizontally center it */
+.hero-text-box {
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*This translates the element by half of its width and its height up and to the left*/
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 20px;
+    line-height: 100px; /* The line-height in conjunction with the margin-top will vertically align the .main-nav to the .logo */
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    padding: 8px 0 8px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%; /* If you want 18px it would be 18/20. Again 20 comes from the font-size listed in the BODY CSS */
+    border-bottom: 2px transparent; /* This is necessary before the :hover and :active below */ 
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22
 }

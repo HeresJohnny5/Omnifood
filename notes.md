@@ -10,3 +10,14 @@
 
 * www.responsivegridsystem.com
 * Just like the *normalize.css* file you want to link the *grid.css* file **BEFORE** your CSS files.
+
+## HTML Elements
+> header
+> nav
+> main
+> article
+> aside
+> section
+> footer
+
+* The *header* element typically contains the logo, navigation, the hero image, main headings, etc. By using the *header* element you tell search engines this container is not a generic 'div' element, but a container which contains header like content.
