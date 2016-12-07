@@ -1,6 +1,6 @@
-/* -------------------------------------------- */
+/***********************/
 /* BODY CSS */
-/* -------------------------------------------- */
+/***********************/
 
 * {
     margin: 0;
@@ -19,9 +19,9 @@ html {
     text-rendering: optimizeLegibility;
 }
 
-/* -------------------------------------------- */
+/***********************/
 /* REUSABLE COMPONENTS */
-/* -------------------------------------------- */
+/***********************/
 
 /* This works in conjunction with the 'grid.css' file */
 /* This will be the only value that will have an absolute value in pixels. You should define all other layout margins and paddings in percentages and not in pixels */
@@ -30,25 +30,80 @@ html {
 	margin: 0 auto;
 }
 
-/* -------------------------------------------- */
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/***********************/
 /* HEADINGS */
-/* -------------------------------------------- */
+/***********************/
+
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
 
 h1 {
     margin-top: 0;
     margin-bottom: 20px;
     color: #fff;
     font-size: 240%;/* In responsive design you want everything to be relative. This will be 48px or 200% of html font-size, 20px */
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     word-spacing: 4px;
+    letter-spacing: 1px;
 }
 
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
 
-/* -------------------------------------------- */
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
+/* :after puts content on the web site using only css */
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    content: ""; /* Whenever you do a :after pseudo-class, you have to specify its content, and in this case, you don't want any words to appear */
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.long-copy {
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%; /* The total width is 100%, so if you want .long-copy centered, the remaining 30% should be distributed to both sides, so 15% left, 15% right, plust the 70% */
+}
+
+.box p {
+    font-size: 90%;
+    line-height: 145%;
+}
+
+/* The .icon-big although a icon can be treated as a font */
+.icon-big {
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+/***********************/
 /* BUTTONS */
-/* -------------------------------------------- */
+/***********************/
 
 /* button CSS */
 /* :link is the anchor tag in it's normal state */
@@ -94,9 +149,9 @@ h1 {
     color: #fff;
 }
 
-/* -------------------------------------------- */
+/***********************/
 /* HEADER */
-/* -------------------------------------------- */
+/***********************/
 
 header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /*The linear-gradient when on top of the image acts like two background images at the same time. You need to have two colors inside the parenthesis*/

@@ -21,3 +21,19 @@
 > footer
 
 * The *header* element typically contains the logo, navigation, the hero image, main headings, etc. By using the *header* element you tell search engines this container is not a generic 'div' element, but a container which contains header like content.
+
+# grid.css Notes
+* The grid.css file provides code to easily create grid-based columns using specific class names based upon the desired grid
+* You should NEVER EVER change the classes which come with the grid. You can however add another class to the grid class and change that instead
+
+# Ionicons Notes
+1. If you have not done so already, download Ionicons from the home page
+2. Move the ionicons.min.css file into Vendors/css
+3. Move the ionicons.eot, ionicons.svg, ionicons.ttf, and ionicons.woff into Vendors/fonts
+4. Link the css to the head of the document
+5. Click on a icon of interest on the Ionicon page
+6. Copy the icon description and paste it as a class using a i element 
+
+# General Notes
+* Each webpage should have only one main heading or h1 element
+* Line height should be between 120 and 145 percent
