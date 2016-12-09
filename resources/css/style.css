@@ -3,20 +3,31 @@
 /***********************/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 /* html CSS */
 /* Lato is the Google Font, linked in the 'head' tag of 'index.html' */
 html {
-    background-color: #fff;
-    color: #555;
-    font-family: 'Lato', 'Arial', sans-serif; 
-    font-weight: 300;
-    font-size: 20px;
-    text-rendering: optimizeLegibility;
+	background-color: #fff;
+	color: #555;
+	font-family: 'Lato', 'Arial', sans-serif; 
+	font-weight: 300;
+	font-size: 20px;
+	text-rendering: optimizeLegibility;
+}
+
+/* The '.clearfix' property is something you should put on your styles, especially if you use any type of floats. */
+/* The '.clearfix:after will clear the float after an element */
+.clearfix {zoom:1}
+.clearfix:after {
+	content: '.';
+	clear: both;
+	display: block;
+	height: 0;
+	visibility: hidden;
 }
 
 /***********************/
@@ -31,11 +42,11 @@ html {
 }
 
 section {
-    padding: 80px 0;
+	padding: 80px 0;
 }
 
 .box {
-    padding: 1%;
+	padding: 1%;
 }
 
 /***********************/
@@ -45,60 +56,60 @@ section {
 h1,
 h2,
 h3 {
-    font-weight: 300;
-    text-transform: uppercase;
+	font-weight: 300;
+	text-transform: uppercase;
 }
 
 h1 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #fff;
-    font-size: 240%;/* In responsive design you want everything to be relative. This will be 48px or 200% of html font-size, 20px */
-    word-spacing: 4px;
-    letter-spacing: 1px;
+	margin-top: 0;
+	margin-bottom: 20px;
+	color: #fff;
+	font-size: 240%;/* In responsive design you want everything to be relative. This will be 48px or 200% of html font-size, 20px */
+	word-spacing: 4px;
+	letter-spacing: 1px;
 }
 
 h2 {
-    font-size: 180%;
-    word-spacing: 2px;
-    text-align: center;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
+	font-size: 180%;
+	word-spacing: 2px;
+	text-align: center;
+	margin-bottom: 30px;
+	letter-spacing: 1px;
 }
 
 h3 {
-    font-size: 110%;
-    margin-bottom: 15px;
+	font-size: 110%;
+	margin-bottom: 15px;
 }
 
 /* :after puts content on the web site using only css */
 h2:after {
-    display: block;
-    height: 2px;
-    background-color: #e67e22;
-    content: ""; /* Whenever you do a :after pseudo-class, you have to specify its content, and in this case, you don't want any words to appear */
-    width: 100px;
-    margin: 0 auto;
-    margin-top: 30px;
+	display: block;
+	height: 2px;
+	background-color: #e67e22;
+	content: ""; /* Whenever you do a :after pseudo-class, you have to specify its content, and in this case, you don't want any words to appear */
+	width: 100px;
+	margin: 0 auto;
+	margin-top: 30px;
 }
 
 .long-copy {
-    line-height: 145%;
-    width: 70%;
-    margin-left: 15%; /* The total width is 100%, so if you want .long-copy centered, the remaining 30% should be distributed to both sides, so 15% left, 15% right, plust the 70% */
+	line-height: 145%;
+	width: 70%;
+	margin-left: 15%; /* The total width is 100%, so if you want .long-copy centered, the remaining 30% should be distributed to both sides, so 15% left, 15% right, plust the 70% */
 }
 
 .box p {
-    font-size: 90%;
-    line-height: 145%;
+	font-size: 90%;
+	line-height: 145%;
 }
 
 /* The .icon-big although a icon can be treated as a font */
 .icon-big {
-    font-size: 350%;
-    display: block;
-    color: #e67e22;
-    margin-bottom: 10px;
+	font-size: 350%;
+	display: block;
+	color: #e67e22;
+	margin-bottom: 10px;
 }
 
 /***********************/
@@ -110,96 +121,203 @@ h2:after {
 /* :visited is the anchor tag after the link has been visited */
 .btn:link,
 .btn:visited {
-    display: inline-block; /* The inline-block element does not force a line break. You can add both padding and margin to a inline-block element */
-    padding: 10px 30px;
-    text-decoration: none;
-    border-radius: 200px;
-    color: #fff;
-    transition: background-color 0.2s, border 0.2s, color 0.2s;
+	display: inline-block; /* The inline-block element does not force a line break. You can add both padding and margin to a inline-block element */
+	padding: 10px 30px;
+	text-decoration: none;
+	border-radius: 200px;
+	color: #fff;
+	transition: background-color 0.2s, border 0.2s, color 0.2s;
 
 }
 
 .btn-full:link,
 .btn-full:visited {
-    background-color: #e67e22;
-    border: 1px solid #e67e22;
-    margin-right: 15px;
-    
+	background-color: #e67e22;
+	border: 1px solid #e67e22;
+	margin-right: 15px; 
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #e67e22;
-    color: #e67e22;
+	border: 1px solid #e67e22;
+	color: #e67e22;
 }
 
 .btn:hover,
 .btn:active {
-    background-color: #cf6d17;  
+	background-color: #cf6d17;  
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #cf6d17;
+	border: 1px solid #cf6d17;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #cf6d17;
-    color: #fff;
+	border: 1px solid #cf6d17;
+	color: #fff;
 }
 
 /***********************/
 /* HEADER */
 /***********************/
 
+/* The 'background-attachment: fixed' creates a parallax effect */
 header {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /*The linear-gradient when on top of the image acts like two background images at the same time. You need to have two colors inside the parenthesis*/
-    height: 100vh; /*vh means it's 100% of the viewport*/
-    background-size: cover;
-    background-position: center;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /*The linear-gradient when on top of the image acts like two background images at the same time. You need to have two colors inside the parenthesis*/
+	height: 100vh; /*vh means it's 100% of the viewport*/
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 /* This will not use the responsive flud grid b/c you want this box to be absolutely positioned. This is the only way you can both vertically and horizontally center it */
 .hero-text-box {
-    position: absolute;
-    width: 1140px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /*This translates the element by half of its width and its height up and to the left*/
+	position: absolute;
+	width: 1140px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%); /*This translates the element by half of its width and its height up and to the left*/
 }
 
 .logo {
-    height: 100px;
-    width: auto;
-    float: left;
-    margin-top: 20px;
+	height: 100px;
+	width: auto;
+	float: left;
+	margin-top: 20px;
 }
 
 .main-nav {
-    float: right;
-    list-style: none;
-    margin-top: 20px;
-    line-height: 100px; /* The line-height in conjunction with the margin-top will vertically align the .main-nav to the .logo */
+	float: right;
+	list-style: none;
+	margin-top: 20px;
+	line-height: 100px; /* The line-height in conjunction with the margin-top will vertically align the .main-nav to the .logo */
 }
 
 .main-nav li {
-    display: inline-block;
-    margin-left: 40px;
+	display: inline-block;
+	margin-left: 40px;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    padding: 8px 0 8px 0;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 90%; /* If you want 18px it would be 18/20. Again 20 comes from the font-size listed in the BODY CSS */
-    border-bottom: 2px transparent; /* This is necessary before the :hover and :active below */ 
-    transition: border-bottom 0.2s;
+	padding: 8px 0 8px 0;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 90%; /* If you want 18px it would be 18/20. Again 20 comes from the font-size listed in the BODY CSS */
+	border-bottom: 2px transparent; /* This is necessary before the :hover and :active below */ 
+	transition: border-bottom 0.2s;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #e67e22
+	border-bottom: 2px solid #e67e22
+}
+
+/***********************/
+/* FEATURES */
+/***********************/
+
+.section-features .long-copy {
+	margin-bottom: 30px;
+}
+
+/***********************/
+/* MEALS */
+/***********************/
+
+.section-meals {
+	padding: 0;  
+}
+
+.meals-showcase {
+	list-style: none;
+	width: 100%;
+}
+
+.meals-showcase li {
+	display: block;
+	float: left;
+	width: 25%;
+}
+
+/* This has the exact width of it's parent which is .meals-showcase li */
+/* The margin 0 overrides any margin previously applied */
+/* The overflow property with hidden attribute will hide any portion of the image which overlows past the browser size */
+.meal-photo {
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	background-color: #000;
+}
+/* The transform property with the scale attribute makes the image larger by the amount being passed */
+/* The transition property along with the transform or opacity attribute provides a smooth animation between the image states */
+.meal-photo img {
+	opacity: 0.7;
+	width: 100%;
+	height: auto;
+	transform: scale(1.15);
+	transition: transform 0.5s, opacity 0.5s;
+}
+
+/* The transform property in conjunction with the scale attribute animates the image from 1.15 back to 1.04; 1.04 is used to do the image's normal size of (1) having some white space */
+.meal-photo img:hover {
+	opacity: 1;
+	transform: scale(1.04);
+}
+
+/***********************/
+/* HOW IT WORKS */
+/***********************/
+
+.section-steps {
+	background-color: f4f4f4;
+}
+
+/* The .steps-box class is associated to two elements. The ':first-of-type' will select the first association in comparison to selecting both */
+/* The text-align property doesn't work solely on text, but any inline or inline-block elements */
+/* The padding uses percentages instead of pixels due to responsive web design where you want your layout design to be fluid; fluid means that you have layout properties instead of rigid pixels */
+.steps-box:first-of-type {
+	text-align: right;
+	padding-right: 3%;
+	margin-top: 30px;
+}
+
+.steps-box:last-of-type {
+	padding-left: 3%;
+	margin-top: 70px;
+}
+
+.app-screen {
+	width: 40%;
+}
+
+.works-step {
+	margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+	margin-bottom: 80px;
+}
+
+.works-step div {
+	color: #e67e22;
+	border: 2px solid #e67e22;
+	display: inline-block;
+	border-radius: 50%;
+	height: 55px;
+	width: 55px;
+	text-align: center;
+	padding: 5px;
+	float: left;
+	font-size: 150%;
+	margin-right: 25px;
+}
+
+.btn-app img {
+	height: 50px;
+	width: auto;
+	margin-right: 10px;
 }
