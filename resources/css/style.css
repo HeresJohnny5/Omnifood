@@ -112,11 +112,40 @@ h2:after {
 	margin-bottom: 10px;
 }
 
+/* The .icon-small although a icon can be treated as a font */
+.icon-small {
+	display: inline-block;
+	width: 30px;
+	text-align: center;
+	color: #e67e22;
+	font-size: 120%;
+	
+	/* secrets to align text and icons */
+	line-height: 120%;
+	vertical-align: middle;
+	margin-top: -5px;
+	margin-right: 10px;
+}
+
 /***********************/
 /* BUTTONS */
 /***********************/
 
-/* button CSS */
+a:link,
+a:visited{
+	color: #e67e22;
+	text-decoration: none;
+	border-bottom: 1px solid #e67e22;
+	padding-bottom: 1px;
+	transition: border-bottom 0.2s, color: 0.2s;
+}
+
+a:hover,
+a:active {
+	color: #555;
+	border-bottom: 1px solid transparent; 
+}
+
 /* :link is the anchor tag in it's normal state */
 /* :visited is the anchor tag after the link has been visited */
 .btn:link,
@@ -273,7 +302,7 @@ header {
 /***********************/
 
 .section-steps {
-	background-color: f4f4f4;
+	background-color: #f4f4f4;
 }
 
 /* The .steps-box class is associated to two elements. The ':first-of-type' will select the first association in comparison to selecting both */
@@ -316,8 +345,74 @@ header {
 	margin-right: 25px;
 }
 
+.btn-app:link,
+.btn-app:visited {
+	border: 0;
+}
+
 .btn-app img {
 	height: 50px;
 	width: auto;
 	margin-right: 10px;
 }
+
+/***********************/
+/* CITIES */
+/***********************/
+
+.box img {
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+}
+
+.city-features {
+	margin-bottom: 5px;
+}
+
+/***********************/
+/* TESTIMONALS */
+/***********************/
+
+.section-testimonals {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
+	background-size: cover;
+	color: #fff;
+	background-attachment: fixed;
+}
+
+blockquote {
+	padding: 2%;
+	font-style: italic;
+	line-height: 145%;
+	position: relative;
+	margin-top: 40px;
+}
+
+/* '\201C' is a ISO special character. You can find a list of ISO characters on css-trics */
+/* Its very important that whenever you use a 'property' position with value of 'absolute' that the element's parent has a 'property' position of 'relative' */
+blockquote:before {
+	content: "\201C";
+	font-size: 500%;
+	display: block;
+	position: absolute;
+	top: -5px;
+	left: -5px;
+}
+
+cite {
+	font-size: 90%;
+	margin-top: 25px;
+	display: block;
+}
+
+cite img {
+	height: 45px;
+	border-radius: 50%;
+	border: 1px solid #e67e22;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+
+
