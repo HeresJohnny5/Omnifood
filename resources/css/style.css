@@ -132,7 +132,7 @@ h2:after {
 /***********************/
 
 a:link,
-a:visited{
+a:visited {
 	color: #e67e22;
 	text-decoration: none;
 	border-bottom: 1px solid #e67e22;
@@ -149,7 +149,8 @@ a:active {
 /* :link is the anchor tag in it's normal state */
 /* :visited is the anchor tag after the link has been visited */
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
 	display: inline-block; /* The inline-block element does not force a line break. You can add both padding and margin to a inline-block element */
 	padding: 10px 30px;
 	text-decoration: none;
@@ -160,7 +161,8 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
 	background-color: #e67e22;
 	border: 1px solid #e67e22;
 	margin-right: 15px; 
@@ -173,7 +175,9 @@ a:active {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
 	background-color: #cf6d17;  
 }
 
@@ -423,6 +427,7 @@ cite img {
 }
 
 /* The parent element of .plan-box is .col span 1-of-3 */
+/* Box Shadow properties: Horizontal Offset, Vertical Offset, Blur Radius, Spread Radius Color */
 .plan-box {
 	background-color: #fff;
 	border-radius: 5px;
@@ -472,4 +477,37 @@ cite img {
 
 .plan-box ul li {
 	padding: 5px 0;
+}
+
+/***********************/
+/* FORM */
+/***********************/
+
+.contact-form {
+	width: 60%;
+	margin: 0 auto;
+}
+
+/* input[type=text] will affect the input specific element with type equal to text whereas input[type=email] will affect the input specific element with type equal to email */
+input[type=text],
+input[type=email],
+select,
+textarea {
+	width: 100%;
+	padding: 7px;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+}
+
+textareat {
+	height: 100px;
+}
+
+input[type=checkbox] {
+	margin: 10px 5px 10px 0;
+}
+
+/* This will remove browser focus borders */
+*:focus {
+	outline: none;
 }
