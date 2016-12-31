@@ -40,4 +40,34 @@ $(document).ready(function () {
 		});
 	});
 	
+	/* Animation on Scroll */
+	
+	/* This makes the features section minus the section-features row not appear on the viewport until the viewport hit a certain waypoint */
+	$('.js--wp-1').waypoint(function (direction) {
+		$('.js--wp-1').addClass('animated fadeIn');
+	}, {
+		offset: '50%'
+	});
+	
+	/* This makes the phone not appear on the viewport until the viewport hits a certain waypoint */
+	$('.js--wp-2').waypoint(function (direction) {
+		$('.js--wp-2').addClass('animated fadeInUp');
+	}, {
+		offset: '50%'
+	});
+	
+	/* This makes the cities section not appear on the viewport until the viewport hits a certain waypoint */
+	$('.js--wp-3').waypoint(function (direction) {
+		$('.js--wp-3').addClass('animated fadeIn');
+	}, {
+		offset: '50%'
+	});
+	
+	/* This makes the premium plan-box pulse */
+	$('.js--wp-4').waypoint(function (direction) {
+		$('.js--wp-4').addClass('animated pulse');
+	}, {
+		offset: '50%'
+	});
+	
 });
