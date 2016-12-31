@@ -135,7 +135,8 @@ a:visited {
 	text-decoration: none;
 	border-bottom: 1px solid #e67e22;
 	padding-bottom: 1px;
-	transition: border-bottom 0.2s, color: 0.2s;
+	-webkit-transition: border-bottom 0.2s;
+	transition: border-bottom 0.2s;
 }
 
 a:hover,
@@ -154,8 +155,8 @@ input[type=submit] {
 	text-decoration: none;
 	border-radius: 200px;
 	color: #fff;
+	-webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
 	transition: background-color 0.2s, border 0.2s, color 0.2s;
-
 }
 
 .btn-full:link,
@@ -194,6 +195,7 @@ input[type=submit]:active {
 
 /* The 'background-attachment: fixed' creates a parallax effect */
 header {
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /*The linear-gradient when on top of the image acts like two background images at the same time. You need to have two colors inside the parenthesis*/
 	height: 100vh; /*vh means it's 100% of the viewport*/
 	background-size: cover;
@@ -207,6 +209,7 @@ header {
 	width: 1140px;
 	top: 50%;
 	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%); /*This translates the element by half of its width and its height up and to the left*/
 }
 
@@ -237,6 +240,7 @@ header {
 	text-transform: uppercase;
 	font-size: 90%; /* If you want 18px it would be 18/20. Again 20 comes from the font-size listed in the BODY CSS */
 	border-bottom: 2px transparent; /* This is necessary before the :hover and :active below */ 
+	-webkit-transition: border-bottom 0.2s; 
 	transition: border-bottom 0.2s;
 }
 
@@ -281,13 +285,18 @@ header {
 	opacity: 0.7;
 	width: 100%;
 	height: auto;
+	-webkit-transform: scale(1.15);
 	transform: scale(1.15);
+	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+	transition: opacity 0.5s, -webkit-transform 0.5s;
 	transition: transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s, -webkit-transform 0.5s;
 }
 
 /* The transform property in conjunction with the scale attribute animates the image from 1.15 back to 1.04; 1.04 is used to do the image's normal size of (1) having some white space */
 .meal-photo img:hover {
 	opacity: 1;
+	-webkit-transform: scale(1.04);
 	transform: scale(1.04);
 }
 
@@ -359,6 +368,7 @@ header {
 /***********************/
 
 .section-testimonals {
+	background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
 	background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(img/back-customers.jpg);
 	background-size: cover;
 	color: #fff;
@@ -514,7 +524,6 @@ footer {
 	text-decoration: none;
 	border: 0;
 	color: #888;
-	transition: 
 }
 
 .footer-nav li a:hover,
@@ -522,11 +531,6 @@ footer {
 
 .social-links li a:link,
 .social-links li a:visited { font-size: 160%; }
-
-.ion-social-facebook,
-.ion-social-twitter,
-.ion-social-googleplus,
-.ion-social-instagram { transition: color: 0.2s; }
 
 .ion-social-facebook:hover { color: #3b5998; }
 
