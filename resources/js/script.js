@@ -41,7 +41,6 @@ $(document).ready(function () {
 	});
 	
 	/* Animation on Scroll */
-	
 	/* This makes the features section minus the section-features row not appear on the viewport until the viewport hit a certain waypoint */
 	$('.js--wp-1').waypoint(function (direction) {
 		$('.js--wp-1').addClass('animated fadeIn');
@@ -68,6 +67,13 @@ $(document).ready(function () {
 		$('.js--wp-4').addClass('animated pulse');
 	}, {
 		offset: '50%'
+	});
+	
+	/* Mobile Navigation */
+	$('.js--nav-icon').click(function () {
+		var nav = $('.js--main-nav');
+		
+		nav.slideToggle(200);
 	});
 	
 });

@@ -231,6 +231,7 @@ header {
 /***********************/
 /* MAIN NAVIGATION */
 /***********************/
+
 .main-nav {
 	float: right;
 	list-style: none;
@@ -259,6 +260,22 @@ header {
 .main-nav li a:active { border-bottom: 2px solid #e67e22 }
 
 /***********************/
+/* MOBILE NAVIGATION */
+/***********************/
+
+.mobile-nav-icon {
+	float: right;
+	margin-top: 30px;
+	cursor: pointer;
+	display: none;
+}
+
+.mobile-nav-icon i {
+	font-size: 200%;
+	color: #fff;
+}
+
+/***********************/
 /* STICKY NAVIGATION */
 /***********************/
 
@@ -274,7 +291,7 @@ header {
 	background-color: rgba(255, 255, 255, 0.98);
 	box-shadow: 0 2px 2px #cbc5c5;
 	z-index: 9999;
-	/* This defines the vertical stacking of elements; 999 is the highest possible value */
+	/* This defines the vertical stacking of elements; 9999 is the highest possible value */
 }
 
 .sticky .main-nav {
@@ -283,7 +300,7 @@ header {
 }
 
 .sticky .main-nav li a:link,
-.sticy .main-nav li a:visited {
+.sticky .main-nav li a:visited {
 	padding: 18px 0;
 	color: #555; 
 }

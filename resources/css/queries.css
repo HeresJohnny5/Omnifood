@@ -60,6 +60,38 @@
 	
 	.main-nav { display: none; }
 	
+	.main-nav {
+		float: left;
+		margin-left: 25px;
+		margin-top: 40px;
+		line-height: 50px;
+	}
+		
+	.main-nav a:link,
+	.main-nav a:visited {
+		display: block;
+		border: none;
+		padding: 10px 0;
+		font-size: 100%;
+		height: 50px;
+	}
+	
+	.main-nav li { display: block; }
+
+	.sticky .main-nav { margin-top: 10px; }
+
+	.sticky .main-nav a:link,
+	.sticky .main-nav a:visited { 
+		padding: 10px 0;
+		height: 50px;
+	}
+	
+	.mobile-nav-icon { display: inline-block; }
+
+	.sticky .mobile-nav-icon { margin-top: 10px; }
+	
+	.sticky .mobile-nav-icon i { color: #555; }
+	
 	h1 { font-size: 180%; }
 	h2 { font-size: 130%; }
 	
@@ -96,10 +128,6 @@
 	.social-links {
 		float: none;
 		margin-left: 30%;
-	}
-	
-	.section-cities img {
-		
 	}
 }
 
