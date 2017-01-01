@@ -1,4 +1,4 @@
-/* Big tablets to 1200px (widths smaller than the 1120px row) */
+/* 1200px on */
 @media only screen and (max-width: 1200px) {
 	.hero-text-box {
 		position: absolute;
@@ -9,7 +9,7 @@
 	.row { padding: 0 2% }
 }
 
-/* Small tablets to big tablets: 768px to 1023px */
+/* 1023px to 1200px */
 @media only screen and (max-width: 1023px) {
 	/* This works b/c all the font sizes were defined using percentages. Which means all the font-sizes are based on the base font size */
 	body { font-size: 18px; }
@@ -49,7 +49,7 @@
 	footer { font-size: 74%; }
 }
 
-/* Small phone to small tablets: 481px to 767px */
+/* 767px to 1022px */
 @media only screen and (max-width: 767px) {
 	body { font-size: 16px; }
 	
@@ -100,8 +100,7 @@
 		margin-left: 0;
 	}
 	
-	.works-step,
-	.works-step:last-of-type { margin-bottom: 20px; }
+	.works-step { margin-bottom: 40px; }
 	
 	.works-step div {
 		height: 40px;
@@ -131,7 +130,7 @@
 	}
 }
 
-/* Small phone: 0 to 480px */
+/* 0 to 480px */
 @media only screen and (max-width: 480px) {
 	section { padding: 25px 0; }
 	
