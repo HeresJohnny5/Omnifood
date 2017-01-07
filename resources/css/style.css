@@ -524,7 +524,7 @@ cite img {
 /***********************/
 
 .contact-form {
-	width: 60%;
+	width: 90%;
 	margin: 0 auto;
 }
 
@@ -539,12 +539,37 @@ textarea {
 	border: 1px solid #ccc;
 }
 
-textareat { height: 100px; }
+textarea { height: 100px; }
 
 input[type=checkbox] { margin: 10px 5px 10px 0; }
 
 /* This will remove browser focus borders */
 *:focus { outline: none; }
+
+.map-box {
+	width: 100%;
+	height: 500px;
+	position: relative;
+}
+
+.map {
+	width: 100%;
+	height: 560px;
+	/* the z-index is used to stack elements. The one w/ the higher z-index appears first. This only works due to the position of both .map-box and .form-box */
+	z-index: 0;
+}
+
+.form-box {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.9);
+	height: 560px;
+	width: 50%;
+	padding-top: 40px;
+	z-index: 10;
+	/* the z-index is used to stack elements. The one w/ the higher z-index appears first. This only works due to the position of both .map-box and .form-box */
+}
 
 /***********************/
 /* FOOTER */
@@ -559,6 +584,10 @@ footer {
 .footer-nav {
 	list-style: none;
 	float: left;
+}
+
+footer .row:first-child {
+	padding-top: 30px;
 }
 
 .social-links {

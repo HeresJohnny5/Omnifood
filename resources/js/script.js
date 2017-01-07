@@ -71,16 +71,33 @@ $(document).ready(function () {
 	
 	/* Mobile Navigation */
 	$('.js--nav-icon').click(function () {
-		var nav = $('.js--main-nav');
-		var icon = $('.js--nav-icon i');
+		var nav = $('.js--main-nav'), icon = $('.js--nav-icon i');
 		
 		nav.slideToggle(200);
 		if (icon.hasClass('ion-navicon-round')) {
 			icon.addClass('ion-close-round');
-			icon.removeClass('ion-navicon-round')
+			icon.removeClass('ion-navicon-round');
 		} else {
 			icon.addClass('ion-navicon-round');
 			icon.removeClass('ion-close-round');
 		}
 	});
+	
+	/* Maps */
+	var map = new GMaps({
+		div: '.map',
+		lat: 40.4413553,
+		lng: -79.9,
+		zoom: 12
+	});
+	
+	map.addMarker({
+		lat: 40.4413553,
+		lng: -79.9883796,
+		title: 'Pittsburgh',
+		infoWindow: {
+  		content: '<p>Our Pittsburgh Headquarters</p>'
+		}
+	});
+	
 });
