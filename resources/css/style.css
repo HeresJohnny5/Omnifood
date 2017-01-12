@@ -548,13 +548,13 @@ input[type=checkbox] { margin: 10px 5px 10px 0; }
 
 .map-box {
 	width: 100%;
-	height: 500px;
+	height: 630px;
 	position: relative;
 }
 
 .map {
 	width: 100%;
-	height: 560px;
+	height: 630px;
 	/* the z-index is used to stack elements. The one w/ the higher z-index appears first. This only works due to the position of both .map-box and .form-box */
 	z-index: 0;
 }
@@ -564,12 +564,25 @@ input[type=checkbox] { margin: 10px 5px 10px 0; }
 	top: 0;
 	right: 0;
 	background-color: rgba(255, 255, 255, 0.9);
-	height: 560px;
+	height: 630px;
 	width: 50%;
 	padding-top: 40px;
 	z-index: 10;
 	/* the z-index is used to stack elements. The one w/ the higher z-index appears first. This only works due to the position of both .map-box and .form-box */
 }
+
+.form-messages {
+	width: 70%;
+	margin: 0 auto;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 30px;
+	color: #333;
+}
+
+.success { background-color: rgba(46, 204, 113, 0.8); }
+
+.error { background-color: rgba(231, 76, 60, 0.8); }
 
 /***********************/
 /* FOOTER */
@@ -631,12 +644,14 @@ footer p {
 	color: #888;
 	text-align: center;
 	margin-top: 20px;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 20px;
 }
 
 /***********************/
 /* ANIMATIONS CSS */
 /***********************/
-
 .js--wp-1,
 .js--wp-2,
 .js--wp-3 {
