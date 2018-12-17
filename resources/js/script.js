@@ -84,20 +84,19 @@ $(document).ready(function () {
 	});
 	
 	/* Maps */
-	var map = new GMaps({
-		div: '.map',
-		lat: 40.4413553,
-		lng: -79.9,
-		zoom: 12
-	});
-	
-	map.addMarker({
-		lat: 40.4413553,
-		lng: -79.9883796,
-		title: 'Pittsburgh',
-		infoWindow: {
-  		content: '<p>Our Pittsburgh Headquarters</p>'
-		}
-	});
-	
+//	var map = new GMaps({
+//		div: '.map',
+//		lat: 40.4413553,
+//		lng: -79.9,
+//		zoom: 12
+//	});
+//	
+//	map.addMarker({
+//		lat: 40.4413553,
+//		lng: -79.9883796,
+//		title: 'Pittsburgh',
+//		infoWindow: {
+//  		content: '<p>Our Pittsburgh Headquarters</p>'
+//		}
+//	});
 });
